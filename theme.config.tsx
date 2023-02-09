@@ -13,7 +13,7 @@ const config: DocsThemeConfig = {
   chat: {
     link: "https://discord.gg/5HvtckjyYb",
   },
-  docsRepositoryBase: "https://github.com/shuding/nextra-docs-template",
+  docsRepositoryBase: "https://github.com/albbus-stack/cua-docs/tree/master",
   footer: {
     component: () => (
       <div className="text-center py-5 pb-5 border-t border-gray-800/70 text-gray-500">

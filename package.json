@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shuding/nextra-docs-template.git"
+    "url": "git+https://github.com/albbus-stack/cua-docs.git"
   },
   "author": "albbus-stack",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shuding/nextra-docs-template/issues"
+    "url": "https://github.com/albbus-stack/cua-docs/issues"
   },
-  "homepage": "https://github.com/shuding/nextra-docs-template#readme",
+  "homepage": "https://github.com/albbus-stack/cua-docs#readme",
   "dependencies": {
     "next": "^13.0.6",
     "nextra": "latest",
