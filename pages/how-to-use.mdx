@@ -1,0 +1,30 @@
+# 🔨 How to use this?
+
+## 1. Set up project
+
+- `yarn install` to install packages and build the project.
+- Set up your environment variables properly by duplicating the `.env.example` file, removing `.example`, and entering your environment variables.
+  - **CLERK_SECRET_KEY** & **NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY**: sign up on [clerk](https://clerk.dev/) to get your API keys
+  - **DATABASE_URL** (**optional**): spin up a Postgres instance with Railway or Supabase (we're using SQLlite by default now, so you don't have to do this unless you're ready for production!)
+- You need to manually enter your clerk frontend API key into `/packages/app/provider/auth/index.tsx`.
+- `yarn db-push` to push our Prisma schema to our DB.
+
+## 2. Start up your project
+
+- `yarn web` to start a web dev server.
+- `yarn native` to run on iOS or Android. **PS**: for this to work, you'll need your web app running on localhost:3000, remember that your NextJS app is also your backend!
+- `yarn studio` to start up your Prisma Studio. **PS**: the tRPC query will show nothing unless you manually open up Prisma and add a "post", or query an user info in the DB!
+
+## 3. Adding a new screen
+
+To automate the process explained below you can use the VSCode extension [t3-cua-tools](https://github.com/albbus-stack/t3-cua-tools), also available on the [marketplace](https://marketplace.visualstudio.com/items?itemName=albbus-stack.t3-cua-tools). It will create the files and add the necessary imports and navigation code for you.
+
+- Create your screens in `packages/app/features`.
+- For smaller components, feel free to put them in `/packages/ui`.
+- For new routes, add them in `/packages/api/src/router`, and make sure you merge them in `index.ts`.
+- When you add a new page or screen, you'll need to add the page into both Expo and NextJS:
+  - **Expo**
+    - Go to `packages/app/navigation/native/index.tsx` and add the page following the example.
+    - Go to `packages/app/provider/navigation/index.tsx` and add the page following the example.
+  - **Next**
+    - Go to `apps/next/pages`, create the folder with the name being your route, and an `index.tsx` that's importing your element from `/app/feature/home`.

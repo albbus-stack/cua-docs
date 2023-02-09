@@ -1,0 +1,32 @@
+# 🌟 How it works?
+
+## Folder Structure
+
+- **apps**
+  - next
+  - expo
+- **packages**
+  - ui (your reusable components with tamagui)
+  - db (db schema & prisma stuff)
+  - app
+    - features (⭐️ all of your native frontend code will go here ⭐️)
+    - navigation (unifying web + mobile navigation)
+    - provider (unifying providers)
+    - utils (your utils like auth & tRPC)
+  - api (all of your tRPC & backend code)
+
+### In a bit more detail
+
+Your **frontend** code will be in React Native, meaning that you're going to write Views instead of divs. Since we are using Tamagui in particular, we're gonna write Stacks instead Views.
+
+- `apps/expo` and `apps/next` are practically empty folders that are simply _referencing_ your `packages/app` folder.
+- If you're familiar with React Native, it's going to feel as if you're writing a React Native app, that just happens to also run really well on the web (with SSR and all of those goodies).
+- Your code will get rendered as HTML/CSS on the NextJS side and normal React Native on the native side.
+
+Your **backend** code is gonna be in `packages/api`. NextJS is going to run this code in a serverless environment, if you're a little confused about how that works [here](https://www.youtube.com/watch?v=2cB5Fh46Vi4&t=1017s)'s a good video by Theo that talks about NextJS as a backend framework.
+
+- Your backend and frontend will communicate with tRPC.
+- Your backend and your DB will communicate with Prisma (ORM).
+- Mobile auth is done with Clerk Expo, and web auth is done with Clerk React and Clerk Next.
+
+\*Note: you don't need to understand how everything works in detail before you can start using this template. As someone that wants to know how every bolt and nut works, I often get
