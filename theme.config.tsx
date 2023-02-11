@@ -4,9 +4,10 @@ import { DocsThemeConfig } from "nextra-theme-docs";
 const config: DocsThemeConfig = {
   useNextSeoProps: () => {
     return {
-      titleTemplate: "%s - CUA Docs",
+      titleTemplate: "CUA Docs - %s",
     };
   },
+  faviconGlyph: "🌌",
   logo: (
     <span className="font-bold md:text-lg transition-all">
       <span className="md:mr-1">🌌</span> create-universal-app
