@@ -21,19 +21,7 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: "https://github.com/albbus-stack/cua-docs/tree/master",
   footer: {
-    component: () => (
-      <div className="text-center py-5 pb-5 border-t border-gray-800/70 text-gray-500">
-        Built with Nextra and NextJS by{" "}
-        <a
-          href="https://github.com/albbus-stack"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline text-gray-600 dark:text-gray-400"
-        >
-          albbus-stack
-        </a>
-      </div>
-    ),
+    component: () => null,
   },
 };
 
