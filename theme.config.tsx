@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
@@ -7,10 +8,16 @@ const config: DocsThemeConfig = {
       titleTemplate: "CUA %s",
     };
   },
-  faviconGlyph: "🌌",
   logo: (
     <span className="font-bold md:text-lg transition-all">
-      <span className="md:mr-1">🌌</span> create-universal-app
+      <Image
+        className="md:mr-3 mr-1 md:h-8 md:w-8 w-6 h-6 inline-block"
+        src="/favicon.ico"
+        width={256}
+        height={256}
+        alt="create-universal-app logo"
+      />
+      create-universal-app
     </span>
   ),
   project: {
